@@ -12,6 +12,7 @@ Spring boot er bygget oven på spring. Det er lettere, at konfigurere projekter 
 wut dis
 
 ## Architecture
+![architecture](https://user-images.githubusercontent.com/54975711/152683836-51d27ce0-1f24-4633-bfc4-34b94fe767e2.png)
 
 ## Testing
 
