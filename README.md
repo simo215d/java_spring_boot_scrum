@@ -23,7 +23,7 @@ Minumin lidt om unit testing
 ## CI/CD
 Pipeline with GitHub actions:
 * Commit pushed into master
-* Tests run
+* Run tests
 * Project builds a jar and puts that jar
 * Containerize the jar with Docker and push it to dockerhub
 * Tell the azure VM to pull and run that container image from dockerhub
