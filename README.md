@@ -18,4 +18,9 @@ Maven er ligesom gradle et værktøj til, at gøre building og dependencies/plug
 Minumin lidt om unit testing
 
 ## CI/CD
-Push to master -> run tests -> build -> deploy to azure
+Pipeline with GitHub actions:
+* Commit pushed into master
+* Tests run
+* Project builds a jar and puts that jar
+* Containerize the jar with Docker and push it to dockerhub
+* Tell the azure VM to pull and run that container image from dockerhub
