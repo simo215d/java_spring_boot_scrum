@@ -15,5 +15,7 @@ wut dis
 ![architecture](https://user-images.githubusercontent.com/54975711/152683836-51d27ce0-1f24-4633-bfc4-34b94fe767e2.png)
 
 ## Testing
+Minumin lidt om unit testing
 
 ## CI/CD
+Push to master -> run tests -> build -> deploy to azure
