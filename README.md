@@ -1,5 +1,6 @@
 # Scrum board API made with java, spring-boot & sql
 
+## Spring-boot
 Spring er et lightweight framework, som gør det lettere, at udvikle loosely coupled systemer med java. Spring features:
 * Dependency injection med application context 
 * database connection, querying & transactions
@@ -7,6 +8,8 @@ Spring er et lightweight framework, som gør det lettere, at udvikle loosely cou
 
 Spring boot er bygget oven på spring. Det er lettere, at konfigurere projekter og bruges primært til, at lave REST APIs med.
 
+## Frontend
+The frontend will be a website made with the framework Angular
 
 ## Maven
 Maven er ligesom gradle et værktøj til, at gøre building og dependencies/plugins lettere at arbejde med
