@@ -21,7 +21,7 @@ class SpringBootScrumApplicationTests {
     @Test
     public void greetingShouldReturnDefaultMessage() throws Exception {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
-                String.class)).contains("Home page .<a href='/hello'>Hello?myName=Simo</a>");
+                String.class)).contains("Home page .<a href='/hello'>Hello?myName=Simon</a>");
     }
 
 }
