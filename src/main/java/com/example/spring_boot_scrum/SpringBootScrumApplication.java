@@ -16,7 +16,7 @@ public class SpringBootScrumApplication {
 
     @GetMapping("/")
     public String home(@RequestParam(value = "myName", defaultValue = "World") String name) {
-        return String.format("Home page <a href='/hello'>click</a>");
+        return String.format("Home page .<a href='/hello'>Hello?myName=Simon</a>");
     }
 
     @GetMapping("/hello")

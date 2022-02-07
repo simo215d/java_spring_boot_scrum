@@ -11,6 +11,7 @@
     <groupId>com.example</groupId>
     <artifactId>spring_boot_scrum</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>spring_boot_scrum</name>
     <description>scrum project for Spring Boot</description>
     <properties>
