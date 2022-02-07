@@ -21,9 +21,14 @@ Maven er ligesom gradle et værktøj til, at gøre building og dependencies/plug
 Minumin lidt om unit testing
 
 ## CI/CD
-Pipeline with GitHub actions:
-* Commit pushed into master
-* Run tests
-* Project builds a jar and puts that jar
+For at undgå "integration hell", så vil vi gerne lave integration ofte (continuous integration). Men compiling, testing & packaging kan tage meget lang tid hvis man skal gør det ofte og kan blokere ens arbejde. Derfor kan vi gøre CI nemmere ved, at outsource dette til en VM via f.eks. GitHub actions. Vi kan sette den til automatisk, at compile, teste og package hver gang vi laver en push eller merge, så vi slipper for, at gøre det lokalt.
+
+På samme måde for, at gøre deployment hurtigere kan det også automatiseres med GitHub actions, som f.eks. vil ske hver gang der er en succesfuld push på master.
+
+On pushes into all branches:
+* Maven verify (compile, test & package)
+
+On merges and pushes on master:
+* Build a jar file
 * Containerize the jar with Docker and push it to dockerhub
 * Tell the azure VM to pull and run that container image from dockerhub
