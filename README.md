@@ -9,7 +9,7 @@ Spring er et lightweight framework, som gør det lettere, at udvikle loosely cou
 Spring boot er bygget oven på spring. Det er lettere, at konfigurere projekter og bruges primært til, at lave REST APIs med.
 
 ## Frontend
-The frontend will be a website made with the framework Angular
+Frontend bliver et seperat projekt lavet med Angular frameworket
 
 ## Maven
 Maven er ligesom gradle et værktøj til, at gøre building og dependencies/plugins lettere at arbejde med
