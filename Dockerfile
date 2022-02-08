@@ -12,6 +12,6 @@ WORKDIR /usr/javaprogram
 
 RUN ls
 
-RUN java -jar demo-0.0.1-SNAPSHOT.jar
+RUN java -jar spring_boot_scrum-0.0.1-SNAPSHOT.jar
 
-CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "spring_boot_scrum-0.0.1-SNAPSHOT.jar"]
