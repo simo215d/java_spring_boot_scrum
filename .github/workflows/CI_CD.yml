@@ -46,6 +46,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           file: ./Dockerfile
+          context: /home/runner/work/java_spring_boot_scrum/java_spring_boot_scrum
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/scrum_backend_java:latest
      #- name: Deploy on azure VM
