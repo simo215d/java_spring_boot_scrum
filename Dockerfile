@@ -1,12 +1,12 @@
 #FROM openjdk:11
 FROM openjdk:11-jre-slim
 
-RUN ls
-
-RUN pwd
+RUN ls /usr
 
 #copy <src> to <dest>
 COPY . /usr
+
+RUN ls /usr
 
 WORKDIR /usr
 
