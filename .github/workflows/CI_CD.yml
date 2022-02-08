@@ -25,6 +25,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      # for debugging
       - run: pwd
       - run: ls
       # Verify will run all the lifecycle goals leading up to verify (compile, tests, package, etc.)
@@ -38,13 +39,13 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
+      # for debugging
       - run: pwd
       - run: ls
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           file: ./Dockerfile
-          context: /home/runner/work/java_spring_boot_scrum/java_spring_boot_scrum
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/scrum_backend_java:latest
      #- name: Deploy on azure VM
