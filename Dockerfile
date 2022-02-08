@@ -6,6 +6,6 @@ COPY . /usr
 
 WORKDIR /usr
 
-RUN java -jar demo-0.0.1-SNAPSHOT.jar
+RUN java -jar demo-0.0.1-SNAPSHO.jar
 
 CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
