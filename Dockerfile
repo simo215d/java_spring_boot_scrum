@@ -10,6 +10,8 @@ RUN ls /usr
 
 WORKDIR /usr/javaprogram
 
+RUN ls
+
 RUN java -jar demo-0.0.1-SNAPSHOT.jar
 
 CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
