@@ -3,7 +3,7 @@ FROM openjdk:11-jre-slim
 
 RUN ls /usr
 
-#copy <src> to <dest>
+#copy <src content from outer system> to <dest to container system>
 COPY ./target/ /usr/javaprogram
 
 RUN ls /usr
