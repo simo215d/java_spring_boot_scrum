@@ -2,7 +2,7 @@
 FROM openjdk:11-jre-slim
 
 #copy <src> to <dest>
-COPY demo-0.0.1-SNAPSHOT.jar /usr
+COPY . /usr
 
 WORKDIR /usr
 
