@@ -56,6 +56,6 @@ jobs:
           url: http://40.118.126.237:8080/update
           method: 'GET'
           username: 'user'
-          password: ${{ secrets.VM_UPDATE_DOCKER_IMAGE_HTTP_KEY }}
+          password: 'xd'
       - name: HTTP Response
         run: echo ${{ steps.http_request.outputs.response }}
