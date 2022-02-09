@@ -53,7 +53,7 @@ jobs:
         id: http_request
         uses: fjogeleit/http-request-action@master
         with:
-          url: http://40.118.126.237:8080/update?key=1#${{ format('http://40.118.126.237:8080/update?key={0}', secrets.VM_UPDATE_DOCKER_IMAGE_HTTP_KEY) }}
+          url: http://40.118.126.237:8080/update
           method: 'GET'
       - name: HTTP Response
         run: echo ${{ steps.http_request.outputs.response }}
