@@ -28,10 +28,10 @@ På samme måde for, at gøre deployment hurtigere kan det også automatiseres m
 
 Før vi kan automatisere processerne, så skal man først være klar over hvordan man gør det manuelt. 
 
-Integration:
+Integration:<br>
 Compiling, testing og packaging jar foregår med Maven, da det er sådan projektet er sat op. Med Maven så er der noget der hedder "lifecycles". Heri er der en masse funktioner vi kan kalde, som udfører f.eks. testing osv. Vi kan kalde disse lifecycle faser med terminalen hvis mvn er installeret.
 
-Deployment:
+Deployment:<br>
 bla
 
 On pushes into all branches:
