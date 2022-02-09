@@ -55,7 +55,8 @@ jobs:
         with:
           url: http://40.118.126.237:8080/update
           method: 'GET'
-          #username: 'user'
-          #password: t478W€Vuiwh
+          username: 'user'
+          password: t478W€Vuiwh
+          timeout: 30000
       - name: HTTP Response
         run: echo ${{ steps.http_request.outputs.response }}
