@@ -32,12 +32,15 @@ Integration:<br>
 Compiling, testing og packaging jar foregår med Maven, da det er sådan projektet er sat op. Med Maven så er der noget der hedder "lifecycles". Heri er der en masse funktioner vi kan kalde, som udfører f.eks. testing osv. Vi kan kalde disse lifecycle faser med terminalen hvis mvn er installeret.
 
 Deployment:<br>
-bla
+Jeg har en Azure VM. Jeg har installeret Docker på den. Jeg skal dermed bygge en docker image, push den til dockerhub og fortælle min VM, at den skal pull & run det image. Den måde jeg fortælle min Azure VM, at den skal pull & run det nye image kan f.eks. være med SSH. Dog vil det kræve en .pem nøgle og det gad jeg ikke oploade til mit offentlige repo. Så jeg lavede i stedet for en REST API med basic authentication. Den har et GET endpoint der hedder update. Den API fungere kun hvis man indsender username og password, så den er sikret sådan. Det endpoint starter et bash script, som downloader det nye image, fjerne det gamle og kører det nye. 
+
+
+Actual implementation is found in the actions workflow yml file.
+
 
 On pushes into all branches:
-* Maven verify (compile, test & package)
+* Maven verify (compile, test & package jar)
 
 On merges and pushes on master:
-* Build a jar file
 * Containerize the jar with Docker and push it to dockerhub
 * Tell the azure VM to pull and run that container image from dockerhub
