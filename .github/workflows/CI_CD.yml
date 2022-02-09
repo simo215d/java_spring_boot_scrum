@@ -49,10 +49,11 @@ jobs:
           context: /home/runner/work/java_spring_boot_scrum/java_spring_boot_scrum
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/scrum_backend_java:latest
-     # - name: Deploy on azure VM
-      #  uses: fjogeleit/http-request-action@master
-      #  with:
-      #    url: '40.118.126.237:2999/update?key=123'
-      #    method: 'POST'
-      #    username: ${{ secrets.AWX_USER }}
-      #    password: ${{ secrets.AWX_PASSWORD }}
+      - name: Deploy on azure VM
+        id: http_request
+        uses: fjogeleit/http-request-action@master
+        with:
+          url: ${{ format('40.118.126.237:8080/update?key={0}', secrets.VM_UPDATE_DOCKER_IMAGE_HTTP_KEY) }}
+          method: 'GET'
+      - name: HTTP Response
+        run: echo ${{ steps.http_request.outputs.response }}
